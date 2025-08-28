@@ -1,0 +1,119 @@
+.clock {
+    width: 100%;
+    max-width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    background: #ffffff url("../assets/clock-face.jpg") center no-repeat;
+    background-size: 100% 100%;
+    border: 10px solid #0491e3;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 60px 30px rgb(0, 136, 255), 0 -15px 15px rgba(134, 134, 134, 0.35),
+        inset 0 -15px 15px #191919, 0 15px 15px rgba(134, 134, 134, 0.35), inset 0 15px 15px #191919;
+            box-shadow: 0 0 60px 30px rgb(0, 136, 255), 0 -15px 15px rgba(134, 134, 134, 0.35),
+        inset 0 -15px 15px #191919, 0 15px 15px rgba(134, 134, 134, 0.35), inset 0 15px 15px #191919;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+}
+
+.clock:before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #ffffff;
+    border: 2px solid rgb(175, 175, 175);
+    border-radius: 50%;
+    z-index: 999;
+}
+
+.clock .hour,
+.clock .min,
+.clock .sec {
+    position: absolute;
+}
+
+.clock>.hour,
+.hr {
+    width: 240px;
+    height: 240px;
+}
+
+.clock>.min,
+.mn {
+    width: 380px;
+    height: 380px;
+}
+
+.clock>.sec,
+.sc {
+    width: 380px;
+    height: 380px;
+}
+
+.hr,
+.mn,
+.sc {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.hr:before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 160px;
+    background-color: #000000;
+    z-index: 10;
+    border-radius: 6px;
+}
+
+.mn:before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 230px;
+    background-color: #FFAA4C;
+    z-index: 11;
+    border-radius: 6px;
+}
+
+.sc:before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 230px;
+    background-color: #ff0000;
+    z-index: 12;
+    border-radius: 6px 6px 0 0;
+}
+
+.buttons-wrapper {
+    margin-top: 50px;
+    text-align: center;
+}
+
+#turn-on-button,
+#turn-off-button {
+    background-color: #0491e3;
+    color: #fff;
+    padding: 5px 40px;
+    cursor: pointer;
+}
+
+#turn-on-button {
+    margin-right: 10px;
+}
